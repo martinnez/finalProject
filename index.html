@@ -1,0 +1,681 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/c7c4906b23.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            font-family: 'Roboto Slab', serif;
+        }
+        
+        i {
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+        
+        hr {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+        }
+        
+        .navbar-nav.navbar-center {
+            position: absolute;
+            left: 50%;
+            transform: translatex(-50%);
+        }
+        
+        .progress {
+            height: 20px;
+            font-weight: bold;
+            font-size: 1em;
+        }
+        
+        .skill-image {
+            height: 60px;
+            width: 60px;
+        }
+        
+        .right-line {
+            border-style: solid;
+            border-width: 0 2px 0 0;
+            border-color: #736AFF;
+            box-shadow: 3px 3px #888888;
+        }
+        
+        .bg-position {
+            background-color: #1589FF;
+        }
+        
+        .bg-card-header {
+            background-color: #0020C2;
+        }
+        
+        .bg-card-footer {
+            background-color: #2B65EC;
+        }
+    </style>
+
+    <script>
+        function changeBackgroundColor() {
+            let col = document.getElementById("btnChangeColor").value;
+            if (col == "light") {
+                document.getElementById("btnChangeColor").value = "dark";
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+            } else if (col == "dark") {
+                document.getElementById("btnChangeColor").value = "light";
+                document.body.style.backgroundColor = "white";
+                document.body.style.color = "black";
+            }
+        }
+
+        function changeFullname() {
+            let val = document.getElementById("input-fullname").value;
+            if (val) {
+                document.getElementById("fullname").innerHTML = val;
+            }
+        }
+
+        function changeNickname() {
+            let val = document.getElementById("input-nickname").value;
+            if (val) {
+                document.getElementById("nickname").innerHTML = val;
+            }
+        }
+
+        // <h5 class="card-title ">Business Management</h5>
+        //                     <div class="text-muted ">
+        //                         <i class="fas fa-genderless "></i> Product Management<br>
+        //                         <i class="fas fa-genderless "></i> Advertising Management<br>
+        //                         <i class="fas fa-genderless "></i> Brand Communications<br>
+        //                     </div>
+
+        // function addSkillTitle() {
+        //     let val = document.getElementById("input-skill-title").value;
+        //     if (val) {
+        //         alert(val);
+        //         let elem = document.createElement("h5");
+        //         // elem.setAttribute("class", "card-title");
+        //         let txt = document.createTextNode("xxx");
+        //         elem.appendChild(txt);
+        //         // alert(elem);
+        //         // document.getElementById("input-skill-title").appendChild(elem);
+        //         document.body.appendChild(elem);
+        //     }
+        // }
+
+        function addSkillTitle() {
+
+            let el = document.createElement("p");
+            el.innerText = 'A paragraph';
+
+            document.body.appendChild(el);
+        }
+
+        function addSkillDetail() {
+            alert("eee");
+        }
+
+        $(function() {
+
+            // jQuery methods go here...
+
+        });
+    </script>
+</head>
+
+<body class="container">
+    <!-- Top -->
+    <section class="mt-4 mb-4">
+        <div class="row">
+            <div class="col-md-6 text-left pl-5">
+                <h1>Resume</h1>
+            </div>
+            <div class="col-md-6 text-right pr-5">
+                <button type="button" class="btn btn-primary btn-lg" id="btnChangeColor" onclick="changeBackgroundColor()" value="light">Change color</button>
+            </div>
+        </div>
+
+    </section>
+    <hr>
+
+    <!-- Left side -->
+    <section class="mt-4 mb-4">
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <div class="card mb-4 text-muted">
+                    <img src="/images/Me Image.jpg" alt="https://dummyimage.com/300x200/000/fff" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title text-center mb-4"><span class="fas fa-id-card    "></span> Profile</h4>
+                        <div class="row">
+                            <div class="col-md-12 ml-1">
+                                <span id="fullname" class="card-text text-center">Supakorn Osathanonda</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 mt-1">
+                                <div class="input-group input-group-sm ">
+                                    <input id="input-fullname" type="text " class="form-control " placeholder="Change fullname">
+                                    <div class="input-group-append ">
+                                        <button class="btn btn-outline-secondary " type="button " id="btn-change-fullname " onclick="changeFullname()"><span class="fas fa-edit "></span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col-md-12 ml-1">
+                                <span id="nickname" class="card-text text-center">(Vee)</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 mt-1">
+                                <div class="input-group input-group-sm ">
+                                    <input id="input-nickname" type="text " class="form-control " placeholder="Change nickname">
+                                    <div class="input-group-append ">
+                                        <button class="btn btn-outline-secondary " type="button " id="btn-change-nickname" onclick="changeNickname()"><span class="fas fa-edit "></span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <ul class="list-group list-group-flush ">
+                        <li class="list-group-item ">
+                            <div class="row ">
+                                <div class="col-md-4 ">Birth date</div>
+                                <div class="col-md-8 ">20 September 1986</div>
+                            </div>
+                            <li class="list-group-item ">
+                                <div class="row ">
+                                    <div class="col-md-4 ">Birth place</div>
+                                    <div class="col-md-8 ">Bangkok, Thailand</div>
+                                </div>
+                            </li>
+                            <li class="list-group-item ">
+                                <div class="row ">
+                                    <div class="col-md-4 ">Age</div>
+                                    <div class="col-md-8 ">33 years</div>
+                                </div>
+                            </li>
+                            <li class="list-group-item ">
+                                <div class="row ">
+                                    <div class="col-md-4 ">Gender</div>
+                                    <div class="col-md-8 ">Male</div>
+                                </div>
+                            </li>
+                            <li class="list-group-item ">
+                                <div class="row ">
+                                    <div class="col-md-4 ">Height / Weight</div>
+                                    <div class="col-md-8 ">172 c.m. / 76 k.g.</div>
+                                </div>
+                            </li>
+                            <li class="list-group-item ">
+                                <div class="row ">
+                                    <div class="col-md-4 ">Nationality</div>
+                                    <div class="col-md-8 ">Thai</div>
+                                </div>
+                            </li>
+                            <li class="list-group-item ">
+                                <div class="row ">
+                                    <div class="col-md-4 ">Status</div>
+                                    <div class="col-md-8 ">Single</div>
+                                </div>
+                            </li>
+                            <li class="list-group-item ">
+                                <div class="row ">
+                                    <div class="col-md-4 ">Contact number</div>
+                                    <div class="col-md-8 ">XXX-XXX-XXXX</div>
+                                </div>
+                            </li>
+                            <li class="list-group-item ">
+                                <div class="row ">
+                                    <div class="col-md-4 ">Email</div>
+                                    <div class="col-md-8 ">sonhuabandai@gmail.com</div>
+                                </div>
+                            </li>
+                    </ul>
+                    <div class="card-body ">
+                        <p>Address</p>
+                        <Address>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque non facilis deserunt quidem iure vel, odio eum voluptatibus, aliquam quod incidunt pariatur et consequuntur reprehenderit modi voluptates in voluptatum aut?
+                        </Address>
+                    </div>
+                    <!-- <div class="card-footer text-muted text-center ">
+                        <h2><span class="fas fa-toggle-off "></span></h2>
+                    </div> -->
+                </div>
+
+                <h4><span class="fas fa-stream "></span> Skill</h4>
+                <hr>
+
+                <div class="card mb-4  text-muted">
+                    <h5 class="card-header bg-card-header text-white ">Language</h5>
+                    <div class="card-body ">
+                        <h5 class="card-title ">English</h5>
+                        <hr>
+
+                        <span class="text-muted ">Listening</span>
+                        <div class="progress ">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated " role="progressbar " aria-valuenow="75 " aria-valuemin="0 " aria-valuemax="100 " style="width: 75% ">4</div>
+                        </div>
+
+                        <span class="text-muted ">Speaking</span>
+                        <div class="progress ">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated " role="progressbar " aria-valuenow="75 " aria-valuemin="0 " aria-valuemax="100 " style="width: 75% ">4</div>
+                        </div>
+
+                        <span class="text-muted ">Reading</span>
+                        <div class="progress ">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated " role="progressbar " aria-valuenow="75 " aria-valuemin="0 " aria-valuemax="100 " style="width: 75% ">4</div>
+                        </div>
+
+                        <span class="text-muted ">Writing</span>
+                        <div class="progress ">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated " role="progressbar " aria-valuenow="60 " aria-valuemin="0 " aria-valuemax="100 " style="width: 60% ">3</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="card mb-4 ">
+                    <h5 class="card-header bg-card-header text-white ">Computing</h5>
+                    <ul class="list-group list-group-flush text-muted">
+                        <li class="list-group-item ">
+                            <h5 class="card-title ">Languages</h5>
+                            <div class="row mt-4 ">
+                                <div class="col-md-3 ">
+                                    <img class="skill-image " src="/images/html5.png " alt="https://dummyimage.com/50x50/000/fff ">
+                                </div>
+                                <div class="col-md-3 ">
+                                    <img class="skill-image " src="/images/css-3.png " alt="https://dummyimage.com/50x50/000/fff ">
+                                </div>
+                                <div class="col-md-3 ">
+                                    <img class="skill-image " src="/images/php.png " alt="https://dummyimage.com/50x50/000/fff ">
+                                </div>
+                                <div class="col-md-3 ">
+                                    <img class="skill-image " src="/images/java.png " alt="https://dummyimage.com/50x50/000/fff ">
+                                </div>
+                            </div>
+                            <div class="row mt-4 ">
+                                <div class="col-md-3 ">
+                                    <img class="skill-image " src="/images/javascript.png " alt="https://dummyimage.com/50x50/000/fff ">
+                                </div>
+                                <div class="col-md-3 ">
+                                    <img class="skill-image " src="/images/hashtag.png " alt="https://dummyimage.com/50x50/000/fff ">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item ">
+                            <h5 class="card-title ">Databases</h5>
+                            <div class="row mt-4 ">
+                                <div class="col-md-3 ">
+                                    <img class="skill-image " src="/images/sql_server.png " alt="https://dummyimage.com/50x50/000/fff ">
+                                </div>
+                                <div class="col-md-3 ">
+                                    <img class="skill-image " src="/images/mysql.jpg " alt="https://dummyimage.com/50x50/000/fff ">
+                                </div>
+                                <div class="col-md-3 ">
+                                    <img class="skill-image " src="/images/postgresql.png " alt="https://dummyimage.com/50x50/000/fff ">
+                                </div>
+                            </div>
+                            <div class="row mt-4 ">
+                                <div class="col-md-3 ">
+                                    <img class="skill-image " src="/images/mongodb.jpg " alt="https://dummyimage.com/50x50/000/fff ">
+                                </div>
+                                <div class="col-md-3 ">
+                                    <img class="skill-image " src="/images/sqllite.png " alt="https://dummyimage.com/50x50/000/fff ">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item ">
+                            <h5 class="card-title ">Frameworks</h5>
+                            <div class="row mt-4 ">
+                                <div class="col-md-3 ">
+                                    <img class="skill-image " src="/images/angularjs.png " alt="https://dummyimage.com/50x50/000/fff ">
+                                </div>
+                                <div class="col-md-3 ">
+                                    <img class="skill-image " src="/images/yii2.jpg " alt="https://dummyimage.com/50x50/000/fff ">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item ">
+                            <h5 class="card-title ">Programs</h5>
+                            <div class="row mt-4 ">
+                                <div class="col-md-3 ">
+                                    <img class="skill-image " src="/images/word.png " alt="https://dummyimage.com/50x50/000/fff ">
+                                </div>
+                                <div class="col-md-3 ">
+                                    <img class="skill-image " src="/images/powerpoint.png " alt="https://dummyimage.com/50x50/000/fff ">
+                                </div>
+                                <div class="col-md-3 ">
+                                    <img class="skill-image " src="/images/excel.png " alt="https://dummyimage.com/50x50/000/fff ">
+                                </div>
+                            </div>
+                            <div class="row mt-4 ">
+                                <div class="col-md-3 ">
+                                    <img class="skill-image " src="/images/rapidminer.png " alt="https://dummyimage.com/50x50/000/fff ">
+                                </div>
+                                <div class="col-md-3 ">
+                                    <img class="skill-image " src="/images/tableau.png " alt="https://dummyimage.com/50x50/000/fff ">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item ">
+                            <div>Icons made by <a href="https://www.flaticon.com/authors/freepik " title="Freepik ">Freepik</a> from <a href="https://www.flaticon.com/ " title="Flaticon ">www.flaticon.com</a></div>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="card mb-4 ">
+                    <h5 class="card-header bg-card-header text-white ">Knowledge</h5>
+                    <ul class="list-group list-group-flush  text-muted">
+                        <li class="list-group-item ">
+                            <h5 class="card-title ">Advertising Management</h5>
+                            <div class="text-muted ">
+                                <i class="fas fa-genderless "></i> E–Marketing<br>
+                                <i class="fas fa-genderless "></i> Service Marketing<br>
+                                <i class="fas fa-genderless "></i> Human Resources Management<br>
+                            </div>
+                        </li>
+                        <li class="list-group-item ">
+                            <h5 class="card-title ">Business Management</h5>
+                            <div class="text-muted ">
+                                <i class="fas fa-genderless "></i> Product Management<br>
+                                <i class="fas fa-genderless "></i> Advertising Management<br>
+                                <i class="fas fa-genderless "></i> Brand Communications<br>
+                            </div>
+                        </li>
+                        <li class="list-group-item ">
+                            <h5 class="card-title ">
+                                <div class="input-group input-group-sm ">
+                                    <input id="input-skill-title" type="text " class="form-control " placeholder="Add skill title ">
+                                    <div class="input-group-append ">
+                                        <button class="btn btn-outline-secondary " type="button " id="btn-add-skill-title " onclick="addSkillTitle()"><span class="fas fa-plus "></span></button>
+                                    </div>
+                                </div>
+                            </h5>
+                            <div class="text-muted ">
+                                <div class="input-group input-group-sm mb-3 ">
+                                    <div class="input-group-prepend ">
+                                        <span class="input-group-text " id="inputGroup-sizing-sm "><i class="fas fa-genderless "></i></span>
+                                    </div>
+                                    <input id="input-skill-detail" type="text " class="form-control " placeholder="Add skill detail " aria-label="Sizing example input " aria-describedby="inputGroup-sizing-sm ">
+                                    <div class="input-group-append ">
+                                        <button class="btn btn-outline-secondary " type="button " id="btn-add-skill-detail " onclick="addSkillDetail()"><span class="fas fa-plus "></span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+
+            </div>
+
+            <div class="col-sm-12 col-md-8 ">
+                <div class="mt-4 ">
+                    <h5><span class="fas fa-university "></span> Education</h5>
+                    <hr>
+                </div>
+                <div class="row ">
+                    <div class="right-line col-sm-12 col-md-4 ">
+                        <b>Bangkok University</b><br> (2547- 2553)
+                    </div>
+                    <div class="col-sm-12 col-md-8 ">Bachelor's Degree in Communication Arts <br> Major in Advertising Management <br> Master in Management</div>
+                </div>
+
+                <div class="mt-4 ">
+                    <h5><span class="fas fa-briefcase "></span> Working experience</h5>
+                    <hr>
+                </div>
+                <p class="text-muted ">Sorted from Present - Past</p>
+                <div class="row ">
+                    <div class="right-line col-sm-12 col-md-4 ">
+                        <b>ICS Travel Group Co.,Ltd.</b><br> 23 Sep 2015 – 1 Feb 2017
+                    </div>
+                    <div class="col-sm-12 col-md-8 ">
+                        <ul class="list-group list-group-horizontal ">
+                            <li class="list-group-item bg-position text-white ">Position</li>
+                            <li class="list-group-item  text-muted">Programmer</li>
+                        </ul>
+                        <br>
+                        <h6>Duties and Responsibilities</h6>
+                        <ul class="list-group list-group-flush mt-2 ">
+                            <li class="list-group-item text-muted ">
+                                <div class="mt-2 ">
+                                    <p><strong>Programming jobs (Use PHP and Company’s Framework)</strong></p>
+                                    <i class="fas fa-ellipsis-h "></i>Design Ticket System (PHP - Angular JS) for internal use
+                                    <br><i class="fas fa-ellipsis-h "></i>Design Tariff Report System (PHP) for internal use
+                                    <br><i class="fas fa-ellipsis-h "></i>Modify Hotel System (PHP) for internal use
+                                    <br><i class="fas fa-ellipsis-h "></i>Modify Quotation System (PHP) for internal use
+                                </div>
+
+                                <div class="mt-3 ">
+                                    <p><strong>Administration jobs</strong></p>
+                                    <i class="fas fa-ellipsis-h "></i>Extract data from the system (SQL Server) to generate reports
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row mt-5 ">
+                    <div class="right-line col-sm-12 col-md-4 ">
+                        <b>Soliwise Corp Co., Ltd.</b><br> 1 Mar 2014 – 31 Aug 2014
+                    </div>
+                    <div class="col-sm-12 col-md-8 ">
+                        <ul class="list-group list-group-horizontal ">
+                            <li class="list-group-item bg-position text-white ">Position</li>
+                            <li class="list-group-item  text-muted">Programmer</li>
+                        </ul>
+                        <br>
+                        <h6>Duties and Responsibilities</h6>
+                        <ul class="list-group list-group-flush mt-2 ">
+                            <li class="list-group-item text-muted ">
+                                <div class="mt-2 ">
+                                    <p><strong>Programming jobs (Use PHP and Company’s Framework)</strong></p>
+                                    <i class="fas fa-ellipsis-h "></i>Design CMS (Content Management System) for internal use.
+                                    <br><i class="fas fa-ellipsis-h "></i>Design e-Service Document of Quality Office (Online Document System) of Ministry of Energy : Department of Energy Business (DOEB) by user requirements.
+                                </div>
+
+                                <div class="mt-3 ">
+                                    <p><strong>Administration jobs</strong></p>
+                                    <i class="fas fa-ellipsis-h "></i>Install the windows system on the local computer.
+                                    <br><i class="fas fa-ellipsis-h "></i>Solve employee usage issues within the company.
+                                    <br><i class="fas fa-ellipsis-h "></i>Generate audit report and maintenance Ministry of Energy : Department of Energy Business (DOEB) server within responsibility of the company each month.
+                                    <br><i class="fas fa-ellipsis-h "></i>Create report on system that designed by company.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row mt-5 ">
+                    <div class="right-line col-sm-12 col-md-4 ">
+                        <b>Symbols of Styles (SOS) Co., Ltd.</b><br> 1 Nov 2012 - 28 Feb 2014
+                    </div>
+                    <div class="col-sm-12 col-md-8 ">
+                        <ul class="list-group list-group-horizontal ">
+                            <li class="list-group-item bg-position text-white ">Position</li>
+                            <li class="list-group-item  text-muted">Administration and Marketing executive </li>
+                        </ul>
+                        <br>
+                        <h6>Duties and Responsibilities</h6>
+                        <ul class="list-group list-group-flush mt-2 ">
+                            <li class="list-group-item text-muted ">
+                                <div class="mt-2 ">
+                                    <p><strong>Administration jobs</strong></p>
+                                    <i class="fas fa-ellipsis-h "></i>Upload a product on the website.
+                                    <br><i class="fas fa-ellipsis-h "></i>Work as assigned.
+                                    <br><i class="fas fa-ellipsis-h "></i>Input a customer lists in to database system.
+                                    <br><i class="fas fa-ellipsis-h "></i>Input a product lists in to database system.
+                                    <br><i class="fas fa-ellipsis-h "></i>Solve problems and give recommendations of the various parts of the website requested by the customer.
+                                </div>
+
+                                <div class="mt-3 ">
+                                    <p><strong>Marketing jobs</strong></p>
+                                    <i class="fas fa-ellipsis-h "></i>Find relevant and interesting content to upload on Facebook.
+                                    <br><i class="fas fa-ellipsis-h "></i>Write relevant content on Facebook.
+                                    <br><i class="fas fa-ellipsis-h "></i>Analyse and select product for advertising.
+                                    <br><i class="fas fa-ellipsis-h "></i>Plan advertising for promotion such as price reduction, Collect points and Gift Voucher etc.
+                                </div>
+
+                                <div class="mt-3 ">
+                                    <p><strong>Other jobs</strong></p>
+                                    <i class="fas fa-ellipsis-h "></i>Coordinate between various department.
+                                    <br><i class="fas fa-ellipsis-h "></i>Coordinate with other companies.
+                                    <br><i class="fas fa-ellipsis-h "></i>Communicate with customers on various matters.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row mt-5 ">
+                    <div class="right-line col-sm-12 col-md-4 ">
+                        <b>Advanced Info Service PLC </b><br> 1 Sep 2011– 29 Feb 2012
+                    </div>
+                    <div class="col-sm-12 col-md-8 ">
+                        <ul class="list-group list-group-horizontal ">
+                            <li class="list-group-item bg-position text-white ">Position</li>
+                            <li class="list-group-item  text-muted">Customer service </li>
+                        </ul>
+                        <br>
+                        <h6>Duties and Responsibilities</h6>
+                        <ul class="list-group list-group-flush mt-2 ">
+                            <li class="list-group-item text-muted ">
+                                <div class="mt-2 ">
+                                    <p><strong>Payment service jobs </strong></p>
+                                    <i class="fas fa-ellipsis-h "></i>Check the accuracy of billing statement.
+                                    <br><i class="fas fa-ellipsis-h "></i>Detailed information about any customer concern.
+                                    <br><i class="fas fa-ellipsis-h "></i>Introduce channels to monitor usage.
+                                    <br><i class="fas fa-ellipsis-h "></i>Input a product lists in to database system.
+                                    <br><i class="fas fa-ellipsis-h "></i>Compensate customers if customers refuse to pay for service.
+                                </div>
+
+                                <div class="mt-3 ">
+                                    <p><strong>Registration jobs </strong></p>
+                                    <i class="fas fa-ellipsis-h "></i>Describe the detail and offer the appropriate package for customer use.
+                                    <br><i class="fas fa-ellipsis-h "></i>Offer privileges and discounts for participating merchants.
+                                    <br><i class="fas fa-ellipsis-h "></i>Register the customer application information.
+                                    <br><i class="fas fa-ellipsis-h "></i>Issue a defective product claim under the terms of the company.
+                                </div>
+
+                                <div class="mt-3 ">
+                                    <p><strong>Technical issue jobs</strong></p>
+                                    <i class="fas fa-ellipsis-h "></i>Solve mobile technical problem.
+                                    <br><i class="fas fa-ellipsis-h "></i>Config mobile phones setting such as Network, Wifi and Internet settings.
+                                    <br><i class="fas fa-ellipsis-h "></i>Explain how to use smart phone.
+                                    <br><i class="fas fa-ellipsis-h "></i>Fix cell phone malfunction caused by Installation of program.
+                                </div>
+
+                                <div class="mt-3 ">
+                                    <p><strong>Sale jobs</strong></p>
+                                    <i class="fas fa-ellipsis-h "></i>Explain the details and features of the various mobile models that interest customers, including other accessories and products of Brand AIS.
+                                </div>
+
+                                <div class="mt-3 ">
+                                    <p><strong>Other jobs</strong></p>
+                                    <i class="fas fa-ellipsis-h "></i>Solve any tasks requested by the client.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-4 ">
+                    <h5><span class="fas fa-running "></span> Trainee experience</h5>
+                    <hr>
+                </div>
+                <div class="row mt-5 ">
+                    <div class="right-line col-sm-12 col-md-4 ">
+                        <b>MADD. AWARD Advertising Contest  </b><br> 19 Nov 2008
+                    </div>
+                    <div class="col-sm-12 col-md-8 ">
+                        <ul class="list-group list-group-horizontal ">
+                            <li class="list-group-item bg-position text-white ">Position</li>
+                            <li class="list-group-item  text-muted">Staff event </li>
+                        </ul>
+                        <br>
+                        <h6>Duties and Responsibilities</h6>
+                        <ul class="list-group list-group-flush mt-2 ">
+                            <li class="list-group-item text-muted ">
+                                <div class="mt-2 ">
+                                    <p><strong>Supervise jobs </strong></p>
+                                    <i class="fas fa-ellipsis-h "></i>Install and place props to match the layout.
+                                </div>
+
+                                <div class="mt-3 ">
+                                    <p><strong>Public relation jobs  </strong></p>
+                                    <i class="fas fa-ellipsis-h "></i>Announce details of the event to the people in theassigned area.
+                                    <br><i class="fas fa-ellipsis-h "></i>Answer the questions of interested people.
+                                </div>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row mt-5 ">
+                    <div class="right-line col-sm-12 col-md-4 ">
+                        <b>Blue Flag Festival Ministry of Commerce (Asian Mercury Co., Ltd.)</b><br> 1 Jun 2011 – 5 Jun 2011
+                    </div>
+                    <div class="col-sm-12 col-md-8 ">
+                        <ul class="list-group list-group-horizontal ">
+                            <li class="list-group-item bg-position text-white ">Position</li>
+                            <li class="list-group-item  text-muted">Staff event </li>
+                        </ul>
+                        <br>
+                        <h6>Duties and Responsibilities</h6>
+                        <ul class="list-group list-group-flush mt-2 ">
+                            <li class="list-group-item text-muted ">
+                                <div class="mt-2 ">
+                                    <p><strong>Supervise jobs </strong></p>
+                                    <i class="fas fa-ellipsis-h "></i>Control the sale of merchandise to the specified quota.
+                                    <br><i class="fas fa-ellipsis-h "></i>Supply equipment to the shop.
+                                </div>
+
+                                <div class="mt-3 ">
+                                    <p><strong>Sale jobs</strong></p>
+                                    <i class="fas fa-ellipsis-h "></i>Sorting products.
+                                    <br><i class="fas fa-ellipsis-h "></i>Packing the product as prescribed.
+                                    <br><i class="fas fa-ellipsis-h "></i>Determine the number of products released over time to prevent stock outages before the festival end.
+                                </div>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- JS -->
+    <script src="/js/jquery-v3.4.1.js"></script>
+
+</body>
+
+</html>
